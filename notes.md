@@ -8,7 +8,7 @@ As part of `Deliverable ⓵ Development deployment: JWT Pizza`, start up the app
 | --------------------------------------------------- | ------------------ | ----------------- | ------------ |
 | View home page                                      |   home.jsx         |      none         |    none      |
 | Register new user<br/>(t@jwt.com, pw: test)         |   register.jsx     |  [POST] /api/auth | INSERT INTO user (name, email,password) VALUES (?, ?, ?)
-                                                                                                 INSERT INTO userRole (userId, role, objectId) VALUES (?, ?, ?)
+                                                                                                 INSERT INTO userRole (userId, role, objectId) VALUES (?, ?, ?) |
 | Login new user<br/>(t@jwt.com, pw: test)            |     login.tsx      |  [PUT]/api/auth   | SELECT * FROM user WHERE email=?
                                                                                                  SELECT * FROM userRole WHERE userId=? |
 | Order pizza                                         |     menu.tsx       |[POST]/api/order/  |  SELECT id, franchiseId, storeId, date FROM dinerOrder WHERE dinerId=? LIMIT                                                                                                    ${offset},${config.db.listPerPage}     
