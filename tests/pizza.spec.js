@@ -5,3 +5,5 @@ test('home page', async ({ page }) => {
 
   expect(await page.title()).toBe('JWT Pizza');
 });
+
+test('buy pizza with login', async ({ page }) => {});
